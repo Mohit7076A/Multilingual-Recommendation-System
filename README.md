@@ -81,7 +81,7 @@ and imported it using pickle library.
 
 Similarly for other locales, all vectors are stored and imported for further modelling.
 
-I wanted to knothe similar vectors for a given vector, it could be found using euclidean distance, manahattan distane or cosine distance. As first two are not recommeded for large datasets, I decided to use cosine distance but again the problem of memory comes and I didnt fing any optimized way to optimize this. To tackle this issue I make model that would take up the vector and iterate through all vectors to find similar vectors that would take O(N) space instead of storing all the similarity scores of each vector in O(NxN) space.
+I wanted to knothe similar vectors for a given vector, it could be found using euclidean distance, manahattan distane or cosine distance. As first two are not recommeded for large datasets, I decided to use cosine distance but again the problem of memory comes and I didnt fing any optimized way to optimize this. To tackle this issue I make model that would take up the vector and iterate through all vectors to find similar vectors that would take O(N) space instead of storing all the similarity scores of each vector in O(NxN) space. The problem with this is that every time I run this model, it will take much time even for predicting for one list of item however I didnt find any solution to it.
 
 ![Screenshot (114)](https://github.com/Mohit7076A/Multilingual-Recommendation-System/assets/98163995/53729a27-dd09-466a-995e-e0c2169291da)
 
@@ -96,6 +96,16 @@ Here are the result for one list from sessions:
 
 
 ![Screenshot (102)](https://github.com/Mohit7076A/Multilingual-Recommendation-System/assets/98163995/ec4b6924-75cf-406a-8f60-eb3fcd931977)
+
+
+# Scope
+Though I made a model which take some values of products and return similar products, but there is the need to make model for optimized like the similarity matrix which is taking enormous time to evaluate.
+
+Also due to this, I wasnt able to calculate the accuracy of the sessions trained.
+So that could also be optimized in future.
+After knowing this, some other techniques/alogrithms can be used to improve the accuracy further.
+Concluding this, since my deadline of this project is just around the corner , I finishd up working on this porject.
+Hope you like it!😊✨
 
 
 
