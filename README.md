@@ -68,8 +68,37 @@ G. Lowercasing all the letters in that resultant string (exeception - for japane
 After all those operations the dataset looks like this for UK products:
 ![Screenshot (111)](https://github.com/Mohit7076A/Multilingual-Recommendation-System/assets/98163995/b0b6ff07-ef46-42e2-8682-bbde655a18b4)
 
+Above are applied to other locales too.
+
 
 **3. Vectorization and Model**
+
+We got string of words corresponding to each product. Now my approach was to create vectors for each each string word and count them which is automatically done thorugh Vectorizers functions in sklearn.feature_extraction. First I used countVectorizer which was a bad decision as it took up all the memory and my system crashed. Then after further searching I got to know about Hashing and TF-IDF vectorizer which are better than it.
+
+I used HashingVectorizer as it is super memory efficient for large datasets and store the resulting vector because I dont want to run again for 2-3 hours
+and imported it using pickle library.
+![Screenshot (113)](https://github.com/Mohit7076A/Multilingual-Recommendation-System/assets/98163995/3a183c68-dd15-4533-b78c-6254493749b4)
+
+Similarly for other locales, all vectors are stored and imported for further modelling.
+
+I wanted to knothe similar vectors for a given vector, it could be found using euclidean distance, manahattan distane or cosine distance. As first two are not recommeded for large datasets, I decided to use cosine distance but again the problem of memory comes and I didnt fing any optimized way to optimize this. To tackle this issue I make model that would take up the vector and iterate through all vectors to find similar vectors that would take O(N) space instead of storing all the similarity scores of each vector in O(NxN) space.
+
+![Screenshot (114)](https://github.com/Mohit7076A/Multilingual-Recommendation-System/assets/98163995/53729a27-dd09-466a-995e-e0c2169291da)
+
+This function takes one productId and its local; and returns 5 (I printed first 5 at that time instead of 10)  similar productIDs.
+![Screenshot (101)](https://github.com/Mohit7076A/Multilingual-Recommendation-System/assets/98163995/e8298ae9-7228-46a1-ba7f-837205b65ef1)
+
+After preprocessing the sessions data, 'prev_items' column has list of productIDs.
+
+My next approach was to select the similar products from last 5 items purchased by user as what I have experienced while surfing E-Commerce websites is the recommendations related to last 1-3 items and rarely saw product related to that I bought before 50 items. And assuming user will not buy the same product again exists in the prev_item list.
+
+Here are the result for one list from sessions:
+
+
+![Screenshot (102)](https://github.com/Mohit7076A/Multilingual-Recommendation-System/assets/98163995/ec4b6924-75cf-406a-8f60-eb3fcd931977)
+
+
+
 
 
 
