@@ -27,20 +27,20 @@ JP_predicted = final_recommender(JP_1['prev_items'], 'JP')
 # ************************* TASK 2 ***********************************
 s2 = pd.read_csv('Dataset MLRS/sessions_test_task2.csv')
 
-ES_1 = s1[s1['locale'] == 'ES']
-ES_1['prev_items'].apply(string_to_list)
-ES_1['prev_items'].apply(remove_endline)
+ES_2 = s2[s2['locale'] == 'ES']
+ES_2['prev_items'].apply(string_to_list)
+ES_2['prev_items'].apply(remove_endline)
 
 
-FR_1 = s1[s1['locale'] == 'FR']
-FR_1['prev_items'].apply(string_to_list)
-FR_1['prev_items'].apply(remove_endline)
+FR_2 = s2[s2['locale'] == 'FR']
+FR_2['prev_items'].apply(string_to_list)
+FR_2['prev_items'].apply(remove_endline)
 
-IT_1 = s1[s1['locale'] == 'IT']
-IT_1['prev_items'].apply(string_to_list)
-IT_1['prev_items'].apply(remove_endline)
+IT_2 = s2[s2['locale'] == 'IT']
+IT_2['prev_items'].apply(string_to_list)
+IT_2['prev_items'].apply(remove_endline)
 
 # Results
-ES_predicted = final_recommender(ES_1['prev_items'], 'ES')
-FR_predicted = final_recommender(FR_1['prev_items'], 'FR')
-IT_predicted = final_recommender(IT_1['prev_items'], 'IT')
+ES_predicted = final_recommender(ES_2['prev_items'], 'ES')
+FR_predicted = final_recommender(FR_2['prev_items'], 'FR')
+IT_predicted = final_recommender(IT_2['prev_items'], 'IT')
