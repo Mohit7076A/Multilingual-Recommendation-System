@@ -1,0 +1,10 @@
+pandas as pd
+numpy as np
+ntlk
+pickle
+string
+sklearn.metrics.pairwise
+sklearn.feature_extraction.txt
+Porter Stemmer
+Snowball Stemmer
+advertools
