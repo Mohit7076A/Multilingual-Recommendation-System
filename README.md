@@ -105,7 +105,9 @@ Also due to this, I wasnt able to calculate the accuracy of the sessions trained
 So that could also be optimized in future.
 After knowing this, some other techniques/alogrithms can be used to improve the accuracy further.
 Concluding this, since my deadline of this project is just around the corner and I could not make sufficient changes to the model , I finished up working on this project for now.
-Through this project, I learnt many new things like about recommender systems, how these works, where are they used, I learnt new libraries to use and in future to I wish to learn more
+
+Through this project, I learnt many new things like about recommender systems, how these works, where are they used, I learnt new libraries to use and in future to I wish to learn more. 
+
 Hope you like it!😊✨
 
 
